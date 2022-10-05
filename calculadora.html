@@ -1,0 +1,57 @@
+<html> 
+<head> 
+</head> 
+<script type="text/javascript"> 
+function myfunction()
+ { 
+var e = document.getElementById("listss"); 
+var s= e.options[e.selectedIndex].value;
+var first = document.getElementById("textbox1").value;
+var second = document.getElementById("textbox2").value; 
+
+switch(s) {
+    case "1":
+        var answer =parseFloat(first)-parseFloat(second); 
+        break;
+    case "2":
+        var answer =parseFloat(first)*parseFloat(second);
+        break;
+    case "3":
+       var answer =parseFloat(first)/parseFloat(second); 
+        break;
+    default:
+        var answer =parseFloat(first)+parseFloat(second); 
+}
+
+var textbox3 = document.getElementById('textbox3'); 
+textbox3.value=answer;
+ }
+ </script>
+ <body     bgcolor="#00ff00 " >
+ <input type="text" name="textbox1" id="textbox1"  value="0" style="height:50px; width:150px"  /> 
+<select    id="listss" style="height:50px; width:50px" >
+  <option value="0" selected="selected" >+</option>
+  <option value="1">-</option>
+  <option value="2">X</option>
+  <option value="3">/</option>
+</select>
+  
+ <input type="text" name="textbox2" id="textbox2"  value="0"  style="height:50px; width:150px"  />
+ <input type="submit" name="button" id="button1" onclick="myfunction()" value="="   style="height:50px; width:50px"  />
+ <br/><input type="text" name="textbox3" id="textbox3"  value="0"  readonly="true" style="height:50px; width:150px"  />
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
